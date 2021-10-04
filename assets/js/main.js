@@ -1,3 +1,3 @@
-let carousel = new Carousel ('#slider', '.slide');
+let carousel = new Carousel ();
 
 carousel.init();

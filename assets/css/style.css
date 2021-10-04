@@ -10,7 +10,7 @@
     list-style-type: none;
 }
 
-.slide {
+.slides__item {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -30,32 +30,32 @@
 }
 
 
-.slide:nth-of-type(1) {
+.slides__item:nth-of-type(1) {
     background-image: url(../img/slide1.jpg);
 }
 
-.slide:nth-of-type(2) {
+.slides__item:nth-of-type(2) {
     background-image: url(../img/slide2.jpg);
 }
 
-.slide:nth-of-type(3) {
+.slides__item:nth-of-type(3) {
     background-image: url(../img/slide3.jpg);
 }
 
-.slide:nth-of-type(4) {
+.slides__item:nth-of-type(4) {
     background-image: url(../img/slide4.jpg);
 }
 
-.slide:nth-of-type(5) {
+.slides__item:nth-of-type(5) {
     background-image: url(../img/slide5.jpg);
 }
 
-.indicator.active {
+.indicators__item.active {
     border-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.6) ;
 }
 
-.indicator{
+.indicators__item {
     height: 18px;
     width: 18px;
     margin: 10px;
@@ -63,7 +63,7 @@
     box-shadow: 0px 0px 5px 2px rgba(179, 178, 178, 0.4) ;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.5;
+    transition: all 0.5s;
 
 }
 
@@ -79,7 +79,7 @@
     z-index: 4;
 }
 
-.control-pause {
+.controls__pause {
     position: absolute;
     padding: 0;
     margin: 0;
@@ -89,29 +89,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 150px;
+    font-size: 10em;
     z-index: 3;
 
 }
 
-.control-pause i {
-    opacity: 0;
+.controls__pause i {
+    opacity: 0.1;
     color:  #c9c3c3;
     cursor: pointer;
     transition: all 1s;
 }
 
-.control-pause i:hover {
+.controls__pause i:hover,
+.controls__pause i:focus {
     opacity: 0.6;
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff;
- 
-    
 }
 
 
-.control-prev,
-.control-next {
+.controls__nav {
     position: absolute;
     top: 0;
     height: 100%;
@@ -128,25 +126,28 @@
 
 
 
-.control-prev {
+.controls__prev {
     left: 0;
 }
 
-.control-prev:hover,
-.control-prev:focus {
-    color: #ffffff;
-    text-shadow: 0 0 10px #ffffff;
-    background: linear-gradient( to right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
-}
-
-.control-next {
+.controls__next {
     right: 0;
     
 }
 
-.control-next:hover, 
-.control-next:focus {
+.controls__nav:hover,
+.controls__nav:focus {
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff;
+}
+
+.controls__prev:hover,
+.controls__prev:focus {
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
+}
+
+
+.controls__next:hover, 
+.controls__next:focus {
     background: linear-gradient( to left, rgba(0, 0, 0, 0.7) 0, transparent 100%);
 }

@@ -9,27 +9,27 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-    <div id = "slider" class="carousel">
-        <div id="slides" class="slides">
-            <div class="slide active"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
-            <div class="slide"></div>
+    <div class="carousel">
+        <div class="slides">
+            <div class="slides__item active"></div>
+            <div class="slides__item"></div>
+            <div class="slides__item"></div>
+            <div class="slides__item"></div>
+            <div class="slides__item"></div>
         </div>
         
-        <ol id = "indicators-container" class="indicators">
-            <li class="indicator active" data-slide-to = "0"></li>
-            <li class="indicator" data-slide-to = "1"></li>
-            <li class="indicator" data-slide-to = "2"></li>
-            <li class="indicator" data-slide-to = "3"></li>
-            <li class="indicator" data-slide-to = "4"></li>
-        </ol>
+        <div class="indicators">
+            <span class="indicators__item active" data-slide-to = "0"></span>
+            <span class="indicators__item" data-slide-to = "1"></span>
+            <span class="indicators__item" data-slide-to = "2"></span>
+            <span class="indicators__item" data-slide-to = "3"></span>
+            <span class="indicators__item" data-slide-to = "4"></span>
+        </div>
 
         <div class="controls">
-            <span id="pause-btn" class = "control control-pause"><i class="far fa-pause-circle"></i></span>
-            <span id="prev-btn" class = "control control-prev"><i class="fas fa-angle-left"></i></span>
-            <span id="next-btn" class = "control control-next"><i class="fas fa-angle-right"></i></span>
+            <span class = "controls__pause"><i class="far fa-pause-circle"></i></span>
+            <span class = "controls__nav controls__prev"><i class="fas fa-angle-left"></i></span>
+            <span class = "controls__nav controls__next"><i class="fas fa-angle-right"></i></span>
         </div>
     </div>
 

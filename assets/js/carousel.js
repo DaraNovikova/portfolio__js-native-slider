@@ -1,12 +1,12 @@
-function Carousel (containerID, slideID){
+function Carousel (){
 
-    this.container = document.querySelector(containerID)
-    this.slides = this.container.querySelectorAll(slideID);
-    this.indicatorsContainer = this.container.querySelector('#indicators-container');
-    this.indicators = this.container.querySelectorAll('.indicator');
-    this.pauseBtn = this.container.querySelector('#pause-btn');
-    this.prevBtn = this.container.querySelector('#prev-btn');
-    this.nextBtn = this.container.querySelector('#next-btn');
+    this.container = document.querySelector('.carousel')
+    this.slides = this.container.querySelectorAll('.slides__item');
+    this.indicatorsContainer = this.container.querySelector('.indicators');
+    this.indicators = this.container.querySelectorAll('.indicators__item');
+    this.pauseBtn = this.container.querySelector('.controls__pause');
+    this.prevBtn = this.container.querySelector('.controls__prev');
+    this.nextBtn = this.container.querySelector('.controls__next');
     
     this.interval = 2000;
 }
@@ -91,9 +91,8 @@ Carousel.prototype = {
     
      indicate (e){
         let target = e.target;
-        if (target.classList.contains('indicator')){
+        if (target.classList.contains('indicators__item')){
             this._pause();
-            // _gotoSlide(+target.getAttribute('data-slide-to')); 
             this._gotoSlide(+target.dataset.slideTo); 
         }  
     
@@ -121,13 +120,3 @@ Carousel.prototype = {
         this.intervalID = setInterval(() => this._gotoNext(), this.interval);
     }
 };
-
-// Carousel.prototype.test1 = function () {
-//     console.log("test1")
-
-// }
-
-// Carousel.prototype.test2 = function () {
-//     console.log("test2")
-
-// }
